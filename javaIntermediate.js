@@ -26,12 +26,12 @@
 //Number 3... //Did not finish...
 const animals = ['Tiger', 'Giraffe']
 console.log(animals)
-animals.push ('Elephant', 'Lion');
-console.log(animals)
-animals.unshift ('Whales', 'Tigers');
-console.log(animals)
+// animals.push ('Elephant', 'Lion');
+// console.log(animals)
+// animals.unshift ('Whales', 'Tigers');
+// console.log(animals)
 
 function replaceMiddleAnimal(newValue) {
-	animals.array[2] = 'Porpoise'
+	animals.array[1] = 'Porpoise'
     }
     console.log(animals)

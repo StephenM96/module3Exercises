@@ -3,17 +3,17 @@
 //console.log("" - 1 + 0) //gives -1
 //console.log(true + false) //QUESTION gives nothing (undefined/null/nothing?)
 //console.log(!true) //gives nothing
-//console.log(6 / "3") //QUESTIONgives 2 whether the 3 is a string or not?
+//console.log(6 / "3") //QUESTION gives 2 whether the 3 is a string or not?
 //console.log("2" * "3") //converts to string
-//console.log(4 + 5 + "px") //adds 4 & 5 and then conatenates with "px" string value
-//console.log("$" + 4 + 5) //concatenates stringe value "$" and also concatenates 4 & 5 by converting them to string to equal $45
+//console.log(4 + 5 + "px") //adds 4 & 5 and then concatenates with "px" string value
+//console.log("$" + 4 + 5) //concatenates string value "$" and also concatenates 4 & 5 by converting them to string to equal $45
 //console.log("4" - 2) //converts "4" string to an integer
-//console.log("4px" - 2) //Non-adressible Number/Not a Number/NaN
+//console.log("4px" - 2) //Non-addressable Number/Not a Number/NaN
 //console.log(" -9 " + 5) //treats "-9" as a string and puts a space around it and then concatenates w/ 5
 //console.log(" -9 " - 5) //treats both as integers
 //console.log(null + 1) //adds 1 to null value
 //console.log(undefined + 1) //NaN
-//console.log(undefined == null) //QUESTION undefiend does not have a value which means it is null (thought null was "nothing"?)
+//console.log(undefined == null) //QUESTION undefined does not have a value which means it is null (thought null was "nothing"?)
 //console.log(undefined === null) //QUESTION null is not the same thing as undefined, although it is the same value??
 //console.log(" \t \n" - 2) //line breaks and new text would not affect the integer value
 
