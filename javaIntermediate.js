@@ -270,64 +270,80 @@
 // // Use the following array of book objects to practice the array functions for map, find and
 // // filter. Test each of your answers to the below tasks.
 
-const books = [
-{ id: 1, title: 'The Great Gatsby', author: 'F. Scott Fitzgerald', year: 1925 },
-{ id: 2, title: 'To Kill a Mockingbird', author: 'Harper Lee', year: 1960 },
-{ id: 3, title: '1984', author: 'George Orwell', year: 1949 },
-{ id: 4, title: 'Brave New World', author: 'Aldous Huxley', year: 1932 },
-{ id: 5, title: 'The Catcher in the Rye', author: 'J.D. Salinger', year: 1951 },
-];
-// console.log(books)
-// const title = books.filter(prod => prod.title).map(prod => prod.title)
-// console.log(title)
+// const books = [
+// { id: 1, title: 'The Great Gatsby', author: 'F. Scott Fitzgerald', year: 1925 },
+// { id: 2, title: 'To Kill a Mockingbird', author: 'Harper Lee', year: 1960 },
+// { id: 3, title: '1984', author: 'George Orwell', year: 1949 },
+// { id: 4, title: 'Brave New World', author: 'Aldous Huxley', year: 1932 },
+// { id: 5, title: 'The Catcher in the Rye', author: 'J.D. Salinger', year: 1951 },
+// ];
+// // console.log(books)
+// // const title = books.filter(prod => prod.title).map(prod => prod.title)
+// // console.log(title)
 
-// // a) Write a function getBookTitle(bookId) that uses the find function to return the
-// // title of the book object with the matching id.
-function getBookTitle(bookID) { 
-  // let findTitle = books.filter(prod => prod.title).map(prod => prod.title) //not necessary
-  let findTitle = books.find(book => bookID===book.id) //reads through the array items and locates the item's ID compared against the parameter passed through in the function (bookID)
-  // console.log(findTitle)
-  return findTitle.title
-}
+// // // a) Write a function getBookTitle(bookId) that uses the find function to return the
+// // // title of the book object with the matching id.
+// function getBookTitle(bookID) { 
+//   // let findTitle = books.filter(prod => prod.title).map(prod => prod.title) //not necessary
+//   let findTitle = books.find(book => bookID===book.id) //reads through the array items and locates the item's ID compared against the parameter passed through in the function (bookID)
+//   // console.log(findTitle)
+//   return findTitle.title
+// }
 
-// console.log(getBookTitle(3))
+// // console.log(getBookTitle(3))
 
-// // b) Write a function getOldBooks() that uses the filter function to return all book
-// // objects written before 1950.
-function getOldBooks(writtenDate) {
-  let bookYears = books.filter(year => year.year < writtenDate) //Looks through array and filters all the books that were written before 1950
-  return bookYears
-}
-// console.log(getOldBooks(1950))
+// // // b) Write a function getOldBooks() that uses the filter function to return all book
+// // // objects written before 1950.
+// function getOldBooks(writtenDate) {
+//   let bookYears = books.filter(year => year.year < writtenDate) //Looks through array and filters all the books that were written before 1950
+//   return bookYears
+// }
+// // console.log(getOldBooks(1950))
 
-// // c) Write a function addGenre() that uses the map function to add a new genre property
-// // to all of the above books, with the value ‘classic’.
-function addGenre(key, value) { //modified past the prompt to add the ability to directly enter in the key:value pairs in the array by calling the function later and passing my parameters through 
-  let bookGenre = books.map((element) => { //mapped array to a new array
-    element.Genre= "Classic"; //defined a new key:value pair
-    const newElement = { //copied array below
-      ...element, 
-      [key]: value, //can pass through parameter to modify new array
-    }
-    return newElement
-  });
-  // console.log(bookGenre)
-  return bookGenre
-}
-// console.log(addGenre("Year Author Died", "Yesterday"))
+// // // c) Write a function addGenre() that uses the map function to add a new genre property
+// // // to all of the above books, with the value ‘classic’.
+// function addGenre(key, value) { //modified past the prompt to add the ability to directly enter in the key:value pairs in the array by calling the function later and passing my parameters through 
+//   let bookGenre = books.map((element) => { //mapped array to a new array
+//     element.Genre= "Classic"; //defined a new key:value pair
+//     const newElement = { //copied array below
+//       ...element, 
+//       [key]: value, //can pass through parameter to modify new array
+//     }
+//     return newElement
+//   });
+//   // console.log(bookGenre)
+//   return bookGenre
+// }
+// // console.log(addGenre("Year Author Died", "Yesterday"))
 
 
-// // d) (Extension) Write a function getTitles(authorInitial) that uses map and
-// // filter together to return an array of book titles for books written by authors whose
-// // names start with authorInitial.
-function getTitles(authorInitial) {
-  let authInit = books.map(element => element.author == authorInitial)
-  console.log(authInit)
-  // return authInit
-}
+// // // d) (Extension) Write a function getTitles(authorInitial) that uses map and
+// // // filter together to return an array of book titles for books written by authors whose
+// // // names start with authorInitial.
+// function getTitles(authorInitial) {
+//   // let authInit = books.filter(element => element.author[0] === authorInitial).map(element => element.title) //alternative way to get the array items that doesn't use the .find method
+//   let authInit = books.find(element => element.author[0] === authorInitial)
+//   // console.log(authInit)
+//   return authInit.title
+// }
 
-// console.log(getTitles("H"))
+// // console.log(getTitles("H"))
 
-// // e) (Extension) Write a function latestBook() that uses find and forEach to get the
-// // book with the most recent publication date.
+// // // e) (Extension) Write a function latestBook() that uses find and forEach to get the
+// // // book with the most recent publication date.
 
+// function latestBook() {
+//   let latest = books[0];
+//   books.forEach(book => {
+//       if (book.year > latest.year) {
+//           latest = book;
+//       }
+//   });
+//   return latest;
+// }
+
+// console.log(latestBook())
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//Number 8...
