@@ -349,27 +349,160 @@
 //Number 8...
 // // The following code creates a new Map object for storing names beginning with A, B, or C
 // // with their phone numbers.
-const phoneBookABC = new Map() //an empty map to begin with
-phoneBookABC.set('Annabelle', '0412312343')
-phoneBookABC.set('Barry', '0433221117')
-phoneBookABC.set('Caroline', '0455221182')
-// console.log(phoneBookABC)
+// const phoneBookABC = new Map() //an empty map to begin with
+// phoneBookABC.set('Annabelle', '0412312343')
+// phoneBookABC.set('Barry', '0433221117')
+// phoneBookABC.set('Caroline', '0455221182')
+// // console.log(phoneBookABC) //testing map
 
 
-// // a) Create a new phoneBookDEF Map to store names beginning with D, E or F
-const phoneBookDEF = new Map()
-phoneBookABC.set('David', '0415689451')
-phoneBookABC.set('Edgar', '0510584115')
-phoneBookABC.set('Francine', '0136645920')
 
-// // b) Initialise the contents of phoneBookDEF by passing in an array of keys/values //I think I already did this above
+// // // a) Create a new phoneBookDEF Map to store names beginning with D, E or F
+// const phoneBookDEF = new Map()
+// phoneBookDEF.set('David', '0415689451')
+// phoneBookDEF.set('Edgar', '0510584115')
+// phoneBookDEF.set('Francine', '0136645920')
+// // console.log(phoneBookDEF) //testing map
+
+// // // b) Initialise the contents of phoneBookDEF by passing in an array of keys/values //I think I already did this above
 
 
-// // c) Update the phone number for Caroline
-phoneBookABC.set("Caroline", 0123654789)
-console.log(phoneBookDEF) //WTF??????.... Come back later...
+// // // c) Update the phone number for Caroline
+// phoneBookDEF.set("Caroline", '0123654789')
+// console.log(phoneBookDEF) //testing adding to map
 
 // // d) Write a function printPhoneBook(contacts) that prints the names and phone
 // // numbers in the given Map
+
+
+// console.log(phoneBookABC)
+
+// const phoneBookABCObject = Object.fromEntries(phoneBookABC)
+// console.log(phoneBookABCObject)
+// const phoneBookDEFObject = Object.fromEntries(phoneBookDEF)
+// console.log(phoneBookDEFObject)
+
+
+// function printPhoneBook(contacts) {
+//   console.log(phoneBookABC)
+//   console.log(phoneBookDEF)
+// }
+// printPhoneBook()
+
 // // e) Combine the contents of the two individual Maps into a single phoneBook Map
+
+// const phoneMap = new Map ([phoneBookABC, phoneBookDEF])
+// console.log(phoneMap)
+
+// function mergeMapObjects(...maps) { //created a new function that checks through the ens of any map passed through as a parameter
+//   const map = new Map(); //creates a new map from maps passed through as parameters
+
+//   for (const m of maps) { 
+//     for (const item of m) {
+//       map.set(...item);
+//     }
+//   }
+
+//   return map;
+// }
+
+
+// const map3 = mergeMapObjects(phoneBookABC, phoneBookDEF);
+
 // // f) Print out the full list of names in the combined phone book
+// console.log(map3);
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// //Number 9...
+// // Given the below salaries object, perform the following tasks.
+// let salaries = {
+//   "Timothy" : 35000,
+//   "David" : 25000,
+//   "Mary" : 55000,
+//   "Christina" : 75000,
+//   "James" : 43000
+//   };
+
+// // a) Write a function sumSalaries(salaries) that calculates and returns the total of all salaries
+
+// function sumSalaries(salaries) {
+//   let total = 0;
+//   // console.log(salaries['David']) 
+//   for(const key in salaries) {
+//     // console.log(key)
+//       total += salaries[key];
+//   }
+//   return total;
+// }
+
+
+// console.log(sumSalaries(salaries))
+
+
+// // b) Write a function topEarner(salaries) that calculates and returns the name of the person
+// // earning the highest salary
+
+//write for in loop to determine value of salary against previous salary and continue until none are higher... If salary is less than or equal, continue to next salary. Else
+
+
+
+// function topEarner(salaries) {
+//   let topSalary = 0; //topSalary now equals $35000
+//   let topPerson = {}
+//   for (const key in salaries) {
+//     if (salaries[key] >= topSalary) {
+//       topSalary = salaries[key] 
+//       topPerson = {
+//         [key]: topSalary
+//       }
+//     }
+//   }
+//   return topPerson  
+//   }
+
+//   console.log(topEarner(salaries))
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//Number 10...
+// // 10.The following code uses the Date object to print the current time and the number of hours
+// // that have passed today so far. Extend the code to do the following:
+// const today = new Date();
+// // console.log('Current time is ' + today.toLocaleTimeString())
+// // console.log(today.getHours() + ' hours have passed so far today')
+
+// // // a) Print the total number of minutes that have passed so far today
+// // console.log(today.getHours() * 60 + today.getMinutes() + ' minutes have passed so far today')
+
+
+// // // b) Print the total number of seconds that have passed so far today
+// // console.log(today.getHours() * 60 * 60 + today.getMinutes() * 60 + today.getSeconds() + ' seconds have passed so far today')
+
+
+// // // c) Calculate and print your age as: 'I am x years, y months and z days old'
+// const birthDay = new Date('1996-01-18');
+//   let ageYears = today.getFullYear() - birthDay.getFullYear();
+//   let ageMonths = today.getMonth() - birthDay.getMonth();
+//   let ageDays = today.getDate()  -birthDay.getDate();
+
+//   if (ageDays < 0) {
+//     ageMonths--;
+//     ageDays += 30;
+//   }
+//   if (ageMonths <0) {
+//     ageYears --;
+//     ageMonths += 12;
+//   }
+
+
+//   console.log(`I am ${ageYears} years, ${ageMonths} months and ${ageDays} days old`)
+
+
+// // // d) Write a function daysInBetween(date1, date2) which calculates and returns the amount
+// // // of days in between the two given dates.
+// function daysInBetween(date1, date2) {
+//   const oneDay = 1000 * 60 *60 *24; //milliseconds in a day
+//   let diffInMilliseconds = Math.abs(date2 - date1);//Math.abs is to ensure math is always positive
+//   return Math.round(diffInMilliseconds / oneDay); //rounds to the nearest whole num
+// }
+
+// console.log(daysInBetween(today, birthDay))
