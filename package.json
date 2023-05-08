@@ -1,0 +1,12 @@
+{
+  "name": "module3exercises",
+  "version": "1.0.0",
+  "description": "Task 1: Create 6 JS functions which print the pizza processing\r statements and call those functions in sequence. Use a mix of\r function declarations, expressions and arrow functions.",
+  "main": "javaAdvanced.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
